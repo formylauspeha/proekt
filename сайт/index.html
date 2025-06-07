@@ -1,0 +1,286 @@
+                </div>
+            </div>
+            
+            <div class="workshop-card">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Концертная фотография">
+                <div class="workshop-info">
+                    <h3>Концертная фотография</h3>
+                    <p>Научитесь снимать динамичные кадры в условиях слабого освещения. Работа с движением, цветом и атмосферой мероприятия.</p>
+                    <a href="competition.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <div class="workshop-card">
+                <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Пейзажная фотография">
+                <div class="workshop-info">
+                    <h3>Пейзажная фотография</h3>
+                    <p>Изучите техники съемки природы в разное время суток. Работа с композицией, светом и постобработкой пейзажных снимков.</p>
+                    <a href="competition.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Главная</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="account.html">Личный кабинет</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="copyright">
+            © 2023 Capture Moments. Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>
+ 
+Светлая версия код 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Moments - Главная</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333333;
+            --primary-color: #6200ee;
+            --secondary-color: #018786;
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+        
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background-color: #3700b3;
+        }
+        
+        .popular-workshops {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .popular-workshops h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .workshops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .workshop-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .workshop-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .workshop-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .workshop-info {
+            padding: 1.5rem;
+        }
+        
+        .workshop-info h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .workshop-info p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        footer {
+            background-color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-color);
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Capture Moments</div>
+        <nav>
+            <ul>
+                <li><a href="index-light.html">Главная</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Искусство фотографии в каждом кадре</h1>
+        <p>Присоединяйтесь к нашим мастер-классам и научитесь создавать потрясающие фотографии у лучших профессионалов отрасли</p>
+        <a href="registration.html" class="btn">Записаться сейчас</a>
+    </section>
+    
+    <section class="popular-workshops">
+        <h2>Популярные мастер-классы</h2>
+        <div class="workshops-grid">
+            <div class="workshop-card">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Портретная фотография">
+                <div class="workshop-info">
+                    <h3>Портретная фотография</h3>
+                    <p>Освойте искусство создания выразительных портретов. Работа с естественным и студийным светом, композиция и работа с моделью.</p>
+                    <a href="competition.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <div class="workshop-card">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Концертная фотография">
+                <div class="workshop-info">
+                    <h3>Концертная фотография</h3>
+                    <p>Научитесь снимать динамичные кадры в условиях слабого освещения. Работа с движением, цветом и атмосферой мероприятия.</p>
+                    <a href="competition.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <div class="workshop-card">
+                <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Пейзажная фотография">
+                <div class="workshop-info">
+                    <h3>Пейзажная фотография</h3>
+                    <p>Изучите техники съемки природы в разное время суток. Работа с композицией, светом и постобработкой пейзажных снимков.</p>
+                    <a href="competition.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="index-light.html">Главная</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="account.html">Личный кабинет</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="copyright">
+            © 2023 Capture Moments. Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>
