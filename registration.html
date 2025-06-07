@@ -1,28 +1,227 @@
-<div class="container"><div class="row justify-content-center"><div class="col-md-9 col-lg-7 col-xl-6 col-ul-5"><main class="content p-3" id="content"><div class="px-3 py-2"><h2 class="text-center mb-3">Регистрация</h2><h4 class="text-center mb-3 font-weight-normal">Через социальные сети</h4><div class="soc-container mb-3"><div class="d-flex justify-content-center"><a class="vkuiButton d-inline-block" span class="vkuiButton__in d-flex align-items-center justify-content-center"><span class="vkuiButton__before"><svg class="d-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" style="width: 24px; height: 24px;"><path fill="currentColor" fill-rule="evenodd" d="M4.265 4.265C3 5.531 3 7.567 3 11.64v.72c0 4.073 0 6.11 1.265 7.375S7.567 21 11.64 21h.72c4.073 0 6.11 0 7.375-1.265S21 16.433 21 12.36v-.72c0-4.073 0-6.11-1.265-7.375S16.433 3 12.36 3h-.72C7.567 3 5.53 3 4.265 4.265M6 8.5c.096 4.682 2.556 7.5 6.61 7.5h.235v-2.679c1.476.15 2.577 1.254 3.026 2.679H18c-.577-2.132-2.075-3.31-3.005-3.76.93-.558 2.246-1.908 2.556-3.74h-1.937c-.406 1.49-1.615 2.84-2.77 2.968V8.5h-1.968v5.197c-1.197-.3-2.759-1.757-2.823-5.197z" clip-rule="evenodd"></path></svg></span><span class="vkuiButton__content">Войти с VK ID</span></span></a><style>
-            .vkuiButton {
-                width: 217px;
-                background-color: #07f;
-                color: #fff;
-                min-height: 36px;
-                border-radius: 8px;
-                min-width: 80px;
-                user-select: none;
-            }
-            .vkuiButton:hover {
-                background-color: #2483e4;
-                color: #fff;
-                text-decoration: none;
-            }
-            .vkuiButton__in {
-                min-height: inherit;
-            }
-            .vkuiButton__before {
-                padding-left: 16px;
-            }
-            .vkuiButton__content {
-                margin-left: 6px;
-                font-size: 14px;
-                line-height: 18px;
-                padding-right: 20px;
-            }
-        </style></div></div></div></main></div></div></div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Moments - Регистрация</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --primary-color: #bb86fc;
+            --secondary-color: #03dac6;
+            --card-bg: #1e1e1e;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #000;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .registration-container {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+        }
+        
+        .registration-container h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #333;
+            color: var(--text-color);
+        }
+        
+        .btn {
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #9a67ea;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        
+        .login-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer {
+            background-color: #000;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-color);
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Capture Moments</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="registration-container">
+        <h1>Регистрация</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Подтвердите пароль</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">Уровень опыта</label>
+                <select id="experience">
+                    <option value="beginner">Начинающий</option>
+                    <option value="intermediate">Любитель</option>
+                    <option value="advanced">Профессионал</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" required> Я согласен с условиями использования и политикой конфиденциальности
+                </label>
+            </div>
+            
+            <button type="submit" class="btn">Зарегистрироваться</button>
+            
+            <div class="login-link">
+                Уже есть аккаунт? <a href="#">Войти</a>
+            </div>
+        </form>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="account.html">Личный кабинет</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="copyright">
+            © 2023 Capture Moments. Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>
