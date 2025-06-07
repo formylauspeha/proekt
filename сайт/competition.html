@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Moments - Конкурс на мастер-класс</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --primary-color: #bb86fc;
+            --secondary-color: #03dac6;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #000;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .competition-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .competition-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .competition-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .competition-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .competition-details {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .competition-details h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item p {
+            margin-top: 0;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #9a67ea;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #018577;
+        }
+
+        .jury-section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .jury-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .jury-card {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .jury-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .jury-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .jury-card p {
+            color: #b0b0b0;
+        }
+
+        .requirements-section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .requirements-section ul {
+            padding-left: 1.5rem;
+        }
+
+        .requirements-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background-color: #000;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-color);
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Capture Moments</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="competition-container">
+        <div class="competition-header">
+            <h1>Конкурс на мастер-класс по портретной фотографии</h1>
+            <p>Победители получат бесплатное участие в эксклюзивном мастер-классе от ведущих фотографов страны</p>
+        </div>
+
+        <img src="https://i.pinimg.com/736x/a8/f2/f1/a8f2f16be6d85e0674b16c2f0a8aac5b.jpg" alt="Портретная фотография" class="competition-image">
+
+        <div class="competition-details">
+            <h2>О конкурсе</h2>
+            <p>Приглашаем фотографов всех уровней принять участие в нашем конкурсе на лучшую портретную фотографию. 
+            Победители получат возможность бесплатно посетить наш эксклюзивный мастер-класс по портретной фотографии, 
+            где они смогут усовершенствовать свои навыки под руководством профессиональных фотографов.</p>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <h3>Даты проведения</h3>
+                    <p>1 июля - 31 июля 2023</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Место проведения</h3>
+                    <p>Студия Capture Moments, Москва</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Призы</h3>
+                    <p>3 бесплатных места на мастер-классе</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Участие</h3>
+                    <p>Бесплатное</p>
+                </div>
+            </div>
+
+            <h2>Как принять участие</h2>
+            <p>1. Зарегистрируйтесь на нашем сайте<br>
+            2. Загрузите свою лучшую портретную фотографию в личном кабинете<br>
+            3. Дождитесь результатов конкурса</p>
+        </div>
+
+        <div class="jury-section">
+            <h2>Жюри конкурса</h2>
+            <div class="jury-grid">
+                <div class="jury-card">
+                    <img src="https://i.pinimg.com/736x/1a/01/85/1a01854128199dbeb457d71a967d6af0.jpg" alt="Джастин Крутетский">
+                    <h3>Джастин Крутетский</h3>
+                    <p>Профессиональный портретный фотограф с 10-летним опытом</p>
+                </div>
+                <div class="jury-card">
+                    <img src="https://i.pinimg.com/736x/fb/98/ef/fb98ef54a93f4de9904c967e6d0f7004.jpg" alt="Виолетта Изосимова">
+                    <h3>Виолетта Изосимова</h3>
+                    <p>Фотограф моды и стиля, преподаватель фотографии</p>
+                </div>
+                <div class="jury-card">
+                    <img src="https://i.pinimg.com/736x/f3/fb/61/f3fb617383c94cb8295b924bad4ff0f0.jpg" alt="Меделин Прекрасная">
+                    <h3>Меделин Прекрасная</h3>
+                    <p>Основатель Capture Moments, эксперт по студийной съемке</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="requirements-section">
+            <h2>Требования к работам</h2>
+            <ul>
+                <li>Фотография должна быть портретной (человек или группа людей)</li>
+                <li>Минимальное разрешение: 2000px по длинной стороне</li>
+                <li>Формат: JPEG или PNG</li>
+                <li>Допускается цветокоррекция и ретушь</li>
+                <li>Не допускается использование фотомонтажа (коллажи, добавление объектов)</li>
+                <li>Каждый участник может подать не более 3 работ</li>
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <a href="registration.html" class="btn">Зарегистрироваться</a>
+            <a href="schedule.html" class="btn btn-secondary">Расписание мастер-классов</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="account.html">Личный кабинет</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="copyright">
+            © 2023 Capture Moments. Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>
