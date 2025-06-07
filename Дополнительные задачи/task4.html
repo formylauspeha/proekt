@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                background: #f0f0f0;
+            }
+            
+            .game-container {
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+            }
+            
+            .character {
+                position: absolute;
+                width: 80px;
+                height: 120px;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url('https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics/walk-right.png');
+                
+                animation: run 1s steps(6) infinite, 
+                        move 5s linear infinite;
+            }
+            
+            @keyframes run {
+                from { background-position: 0 0; }
+                to { background-position: -304px 0; }
+            }
+            
+            @keyframes move {
+                from { left: -100px; }
+                to { left: calc(100% + 50px); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="game-container">
+            <div class="character"></div>
+        </div>
+    </body>
+</html>
